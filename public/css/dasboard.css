@@ -1,0 +1,117 @@
+#alertMessage {
+    display: none;
+    position: fixed;
+    background-color: #7ab4cf;
+    border: 1px solid #d9ad77;
+    top: 0px;
+    /* right: 20px; */
+    z-index: 9999;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+  margin: auto;
+  vertical-align: middle;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .center p{
+  margin-top:10px;
+       }
+  
+  #alertMessage.show {
+    display: block;
+    opacity: 1;
+  }
+  .success-font{
+  font-size: 20px;
+  font-weight: bold;
+  }
+  .email-button{
+    border: 1px solid #83a7dc;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: none;
+  
+    text-decoration: none;
+
+}
+.delete-btn{
+    border: 1px solid #83a7dc;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: none;
+  
+    text-decoration: none;
+}
+.delete-btn a{
+    text-decoration: none;
+    color: black;
+}
+.update-btn{
+  border: 1px solid #83a7dc;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: none;
+
+  text-decoration: none;
+}
+.update-btn a{
+  text-decoration: none;
+  color: black;
+}
+.btn-flex{
+  display: flex;
+  flex-direction: row;
+}
+.count{
+  margin-left:5px;
+  font-size: 17px;
+}
+
+
+/* .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+} */
+#MsgModalBtn{
+  background-color: #7fd5e2;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+#MsgModalBtn:hover{
+  background-color: #578991;
+ 
+}
+.ml-left{
+  margin-left: 4px;
+}
