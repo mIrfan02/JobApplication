@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\job;
 use App\Exports\UsersExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -14,6 +16,7 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Queue\Job as QueueJob;
 use Carbon\Carbon;
 use Captcha;
+
 use App\Models\Category;
 use App\Models\Message;
 use App\Models\User;
@@ -255,12 +258,23 @@ public function approved($id)
 }
 
 
+// public function fetchCategories()
+// {
+//     $categories = Category::select('name')
+//         ->where('status', 'active')
+//         ->groupBy('name')
+//         ->orderByDesc('created_at')
+//         ->pluck('name');
+
+//     return view('index', ['categories' => $categories]);
+// }
+
 public function fetchCategories()
 {
-    $categories = Category::select('name')
+    $categories = Category::select('name', DB::raw('MAX(created_at) as max_created_at'))
         ->where('status', 'active')
         ->groupBy('name')
-        ->orderByDesc('created_at')
+        ->orderByDesc('max_created_at')
         ->pluck('name');
 
     return view('index', ['categories' => $categories]);
